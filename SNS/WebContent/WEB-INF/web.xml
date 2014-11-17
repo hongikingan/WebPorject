@@ -4,40 +4,17 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 		http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
-	<display-name>web05</display-name>
+	<display-name>sns</display-name>
 	
-  <!-- 컨텍스트 초기화 파라미터 -->
-	<context-param>
-		<param-name>driver</param-name>
-		<param-value>com.mysql.jdbc.Driver</param-value>
-	</context-param>
-	<context-param>
-		<param-name>url</param-name>
-		<param-value>jdbc:mysql://localhost/studydb</param-value>
-	</context-param>
-	<context-param>
-		<param-name>user</param-name>
-		<param-value>study</param-value>
-	</context-param>
-	<context-param>
-		<param-name>password</param-name>
-		<param-value>study</param-value>
-	</context-param>
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/error/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error/404-error.jsp</location>
+	</error-page>
 	
-	<!-- 필터 선언 -->
-	
-	<!-- 필터 URL 매핑 -->
-		
-	<!-- 서블릿 선언 -->
-	
-	<servlet>
-		<servlet-name>AppInitServlet</servlet-name>
-		<servlet-class>spms.servlets.AppInitServlet</servlet-class>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-	
-	<!-- 서블릿을 URL과 연결 -->
-
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.htm</welcome-file>
