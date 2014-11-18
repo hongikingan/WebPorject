@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>mysns:404-error</title>
 </head>
-<jsp:useBean id="now" class="java.util.Date"/>
+<jsp:useBean id="now" class="java.util.Date" />
 <body>
 <div align=center>
 <H2>mysns:404-error 발생!!</H2>
