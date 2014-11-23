@@ -15,7 +15,6 @@
 	$(function() {
 		$("#accordion").accordion({
 			heightStyle : "content",
-			active : parseInt("${curmsg == null ? 0:curmsg}")
 		});
 	});
 
@@ -61,42 +60,31 @@
 				<br>
 				<br>
 				<h3>친구들의 최신 소식</h3>
-				<div id="accordion">
-					<c:forEach varStatus="mcnt" var="msgs" items="${datas}">
-					<c:set var="m" value="${msgs.message}"/>
-					<h3>[${m.uid}]${m.msg} :: [좋아요 ${m.favcount} | 댓글 ${m.replycount}]</h3>
-					<div>
-						<p></p>
-						<p><sns:smenu mid="${m.mid}" auid="${m.uid}" curmsg="${mcnt.index}"/>/ ${m.date}에 작성된 글입니다.</p>
-						
-						<ul class="reply">
-						<c:forEach  var="r" items="${msgs.rlist}">
-							<li>${r.uid } :: ${r.rmsg} - ${r.date} <sns:rmenu curmsg="${mcnt.index}" rid="${r.rid}" ruid="${r.uid}"/></li>
-						</c:forEach>
-						</ul>
-						
-						<form action="sns_control.jsp?action=newreply&cnt=${cnt}" method="post">
-							<input type="hidden" name="mid" value="${m.mid}">
-							<input type="hidden" name="uid" value="${uid}">
-							<input type="hidden" name="suid" value="${suid}">
-							<input type="hidden" name="curmsg" value="${mcnt.index}">				
-							<sns:write type="rmsg"/>
-						</form>
-					</div>
-					</c:forEach>
-				</div>
-			
-				<div align="center"><a href="sns_control.jsp?action=getall&cnt=${cnt+5}&suid=${suid}">더보기&gt;&gt;</a></div>
+<div id="accordion">
+  <h3>김프리 :: 2013.7.8:14:00 작성 [좋아요 6 | 댓글 4]</h3>
+  <div>
+    <p>어제는 나홀로 영화를 보았습니다. ^^ 사람들이 이상하다고 해도 나는 즐거워요..</p>
+    <p>[삭제] 좋아요 / 2013.7.8:14:00 </p>
+    <ul class="reply">
+    	<li>홍길동 :: 저랑 똑 같네요....  - 2013.7.8:14:00 <a href="">삭제</a></li>
+    	<li>아무개 :: 이런일은 있어서는 안되지요.. 파이팅~~~ - 2013.7.8:14:00</li>
+    	<li>김사랑 :: 전화 하지 그랬니.... 친구 좋다는 것이 ㅋㅋㅋ - 2013.7.8:14:00</li>
+    </ul>
+    	<form action="" class="">
+    		댓글달기 <input type="text" name="" size="60">	
+    	</form>
+  </div>
+</div>
+</section>
 
-			</section>
 			<aside id="sidebar2">
 				<!-- sidebar2 -->
 				<h2>새로운 친구들.!!</h2>
-				<c:forEach items="${nusers}" var="n">
 					<ul>
-						<li><a href="sns_control.jsp?action=getall&suid=${n}">${n}</a></li>
+						<li><a href="#">user1</a></li>
+						<li><a href="#">user2</a></li>
+						<li><a href="#">user3</a></li>	
 					</ul>
-				</c:forEach>
 
 				<br> <br>
 				<h3>We're Social Too!!</h3>

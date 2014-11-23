@@ -1,19 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isErrorPage="true"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>mysns error</title>
 </head>
-<jsp:useBean id="now" class="java.util.Date"/>
+<jsp:useBean id="now" class="java.util.Date" />
 <body>
 <div align=center>
 <H2>MySNS 오류!!</H2>
 <HR>
 
 <table>
-<tr width=100% bgcolor="pink"><td>
+<tr bgcolor="pink"><td>
 관리자에게 문의해 주세요..<BR>
 빠른시일내 복구하겠습니다.
 </td></tr>
@@ -25,5 +25,4 @@ ${now}<p>
 </td></tr>
 </table>
 </div>
-</body>
 </html>
